@@ -18,7 +18,7 @@ class RootViewController: UIViewController {
         self.view.backgroundColor = UIColor.blackColor()
         self.btnCheck.backgroundColor = UIColor.grayColor()
         self.btnCheck.setTitle("Check", forState: UIControlState.Normal)
-        self.btnCheck.addTarget(self, action: Selector(OnCheck()), forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnCheck.addTarget(self, action: "OnCheck", forControlEvents: UIControlEvents.TouchUpInside)
         self.view .addSubview(self.btnCheck)
         self.btnCheck.snp_makeConstraints { [unowned self] (make) -> Void in
             make.center.equalTo(self.view.snp_center)
@@ -34,6 +34,8 @@ class RootViewController: UIViewController {
     
     func OnCheck() {
         DLog("");
+        let numUrl = "http://num.10010.com/NumApp/GoodsDetail/queryMoreNums?callback=jsonp_queryMoreNums&province=51&cityCode=540&rankMoney=&groupKey=73044235&mid=&q_p=51&net=01&roleValue=&preFeeSel=0&keyValue=&Show4GNum=TRUE&q_p=61&_=1430065446606"
+        
     }
 
     /*
